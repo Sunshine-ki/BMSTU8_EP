@@ -11,6 +11,7 @@ root = Tk()
 nb = ttk.Notebook(root)
 experiment = PfeFrame(nb)
 dfe_experiment = DfeFrame(nb)
+root.configure(background="white")
 
 
 varList = {
@@ -83,7 +84,7 @@ def work_one(Event):
 
 
 def pfe_inputs(root):
-    t = tk.Label(root, text="Эксперимент")
+    t = tk.Label(root, text="Эксперимент", background="white")
     t.grid(column=1)
     frame_inputs = Frame(root)
     items_1 = [
@@ -121,7 +122,7 @@ def pfe_inputs(root):
     i_list_5 = i.InputList(master=root, items=items_4)
     i_list_5.grid(column=1,  padx=10)
 
-    btn = Button(root, text="Запуск")
+    btn = Button(root, text="Запуск", background="white")
     btn.bind("<Button-1>", work_pfe)
       
     btn.grid(column=1, padx=10, pady=10) 
@@ -136,7 +137,7 @@ def draw_new_point(root):
     i_list = i.InputList(master=root, items=items, title="Добавление точки факторного пространства")
     i_list.grid(column=1)
 
-    btn = Button(root, text="Добавить", state=DISABLED)
+    btn = Button(root, text="Добавить", state=DISABLED, background="white")
     btn.bind("<Button-1>", work_one)       
     btn.grid(column=1, padx=10, pady=10)
     btn.config(state="disabled")
@@ -164,15 +165,15 @@ def expirement_list(root):
     btn2.grid(column=1, padx=10, pady=10) 
 
 if __name__ == '__main__':
-    f_view = Frame(root, highlightbackground="lightgrey", highlightthickness=1)
+    f_view = Frame(root, highlightbackground="white", highlightthickness=1)
 
-    expirement_list(f_view)
+    # expirement_list(f_view)
 
     f_view.grid(row=0, column=3,  padx=10, pady=10)
   
 
-    f_pfe = Frame(root, highlightbackground="lightgrey", highlightthickness=1)
-    f_one = Frame(root, highlightbackground="lightgrey", highlightthickness=1)
+    f_pfe = Frame(root, highlightbackground="white", highlightthickness=1)
+    f_one = Frame(root, highlightbackground="white", highlightthickness=1)
     pfe_inputs(f_pfe)
     add_button = draw_new_point(f_one)
     f_pfe.grid(row=0, column=0)

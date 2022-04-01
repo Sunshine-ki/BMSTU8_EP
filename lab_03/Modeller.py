@@ -21,19 +21,7 @@ class Modeller:
 
         blocks = self._generators + self._operators 
 
-        count = 0
         while processed <= num_requests:
-            # my_str = 'iter '
-            # for oper in self._operators: 
-            #     my_str += str(len(oper.queue)) + ' '
-            # my_str += "|||||" 
-            # for oper in self._generators: 
-            #     my_str += str(oper.num_requests) + ' '
-            # my_str += "|||||" 
-            # for oper in self._operators: 
-            #     my_str += str(oper.processed_requests) + ' '
-            # print(my_str)
-
             # находим наименьшее время
             current_time = self._generators[0].next
             for block in blocks:

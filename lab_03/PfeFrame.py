@@ -22,19 +22,19 @@ class PfeFrame(tk.Frame):
 
         self.formula_frame = tk.Frame(
             master=self, 
-            highlightbackground="lightgrey", 
-            highlightthickness=1)
+            highlightbackground="white", 
+            highlightthickness=1,background="white")
 
         self.lin_formula = tk.StringVar()
         self.not_lin_formula = tk.StringVar()
-        lin_label = tk.Label(  self.formula_frame, text="Линейная модель: ")
+        lin_label = tk.Label(  self.formula_frame, text="Линейная модель: ", background="white")
         lin_label.grid(row=0, column=0, sticky="e")
-        lin_formula_label = tk.Label(self.formula_frame, textvariable=self.lin_formula)
+        lin_formula_label = tk.Label(self.formula_frame, textvariable=self.lin_formula,background="white")
         lin_formula_label.grid(row=0, column=1, sticky="w")
 
-        not_lin_label = tk.Label(self.formula_frame, text="Частично нелинейная модель: ")
+        not_lin_label = tk.Label(self.formula_frame, text="Частично нелинейная модель: ", background="white")
         not_lin_label.grid(row=1, column=0, sticky="e")
-        not_lin_formula_label = tk.Label(self.formula_frame, textvariable=self.not_lin_formula)
+        not_lin_formula_label = tk.Label(self.formula_frame, textvariable=self.not_lin_formula, background="white")
         not_lin_formula_label.grid(row=1, column=1, sticky="w")
 
         self.formula_frame.grid(column=0, row=2)
