@@ -1,5 +1,8 @@
   
 from numpy.random import rayleigh, exponential
+import random
+import numpy as np
+import math
 
 # Вариант 14
 class RayleighDistribution:
@@ -8,7 +11,8 @@ class RayleighDistribution:
 
     def generate(self):
         return rayleigh(self.sigma)
-    
+
+
 class Exponentialistribution:
     def __init__(self, lambdaParam: float):
         self.lambdaParam = lambdaParam
